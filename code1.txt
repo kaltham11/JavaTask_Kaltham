@@ -1,0 +1,42 @@
+public class HelloWorld {
+
+    public static void main(String[] args){
+        System.out.println("Hello World This is my CV");
+        System.out.println("Kaltham AL Difai\n");
+        System.out.println("Al-Sharqiya North\n");
+        System.out.println("Phone Number: 78499961\n");
+        System.out.println("Email:kaltham.aldifai@gmail.com\n");
+        System.out.println("Birth Date:12/04/1998\n");
+        System.out.println("Graduated from University of Nizwa\n");
+        System.out.println("Major: computer Engineering\n");
+        System.out.println("""
+                About me: An enthusiastic graduate who is skilled in problem solving, maintaining
+                computer and computer networking. Achieved a high grade in my final
+                year project that is an IoT based safe assembly points with alert system for
+                disasters that help population and civil defense.
+                """);
+        System.out.println("""
+                             Internship:
+                                        Ministry of Information
+                                        Directorate General of Education
+                                        Sinaw Hospital
+                             """);
+        System.out.println("""
+                         skills:
+                         _Communication
+                         _Problem Solving
+                         _Team working
+                         _Technical Support
+                         _Bilingual: Arabic & English
+                         """);
+        System.out.println("Certificates:\n" +
+                           "              Computer Maintenance approved by the Ministry of Higher Education");
+
+
+
+
+
+
+
+    }
+}
