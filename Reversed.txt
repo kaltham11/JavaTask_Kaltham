@@ -1,0 +1,39 @@
+//Main class
+public class Main {
+
+    public static void main(String[] args) {
+        String[] names = {"Nasser", "Haitham", "Manal", "Hanin"};
+        StringBuilder finalResult = new StringBuilder();
+        Reversed stringReverser = new Reversed();
+        finalResult.append("{");
+        for (int i = 0; i < names.length; i++) {
+            String newReversedName = stringReverser.reversedStringName(names[i]);
+            finalResult.append(newReversedName);
+            if (i != names.length - 1) {
+                finalResult.append(", ");
+            }
+
+        }
+
+        finalResult.append("}");
+        System.out.println(finalResult.toString());
+    }
+}
+
+
+//Reversed class
+
+public class Reversed {
+    public  String reversedStringName(String name) {
+
+        StringBuilder reversedStringFinal = new StringBuilder();
+        char[] characterArray = name.toCharArray();
+        int lengthOfStringToReverse = name.length()-1;
+        reversedStringFinal.append("\"");
+        for(int i = lengthOfStringToReverse; i > -1; i--) {
+            reversedStringFinal.append(characterArray[i]);
+        }
+        reversedStringFinal.append("\"");
+        return reversedStringFinal.toString();
+    }
+}
