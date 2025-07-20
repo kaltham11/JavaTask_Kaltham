@@ -1,0 +1,54 @@
+import java.lang.classfile.instruction.SwitchCase;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+       BankSystem bankSystem=new BankSystem();
+       Scanner scanner=new Scanner(System.in);
+       Boolean control=true;
+       bankSystem.loadData();
+       while (control){
+           System.out.println("Welcome to bank system");
+           System.out.println("1. create Account");
+           System.out.println("2. Deposit Money");
+           System.out.println("3. withdraw Money");
+           System.out.println("4. viewBalances");
+           System.out.println("5. view Transaction History");
+           System.out.println("6. Exit");
+           System.out.println("Please, choice an option from -1- To -6-");
+           String choice=scanner.nextLine();
+
+           switch (choice){
+               case "1":
+                   bankSystem.createAccount();
+                   break;
+
+               case "2":
+                   bankSystem.DepositMoney();
+                   break;
+
+               case "3":
+                   bankSystem.withdrawMoney();
+                   break;
+
+               case "4":
+                   bankSystem.viewBalances();
+                   break;
+
+               case "5":
+                   bankSystem.viewTransactionHistory();
+                   break;
+
+               case "6":
+                   control=false;
+                   bankSystem.saveData();
+                   System.out.println("GoodBye");
+                   break;
+               default:
+                   System.out.println("Invalied choice Please choice number from 1 To 6 ");
+           }
+       }
+       scanner.close();
+    }
+}
