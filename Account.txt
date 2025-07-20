@@ -1,0 +1,71 @@
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Account {
+
+    private String name;
+    private String civilId;
+    private String numberPhone;
+    private String accountNumber;
+    private Double balance;
+    private LocalDate openDate;
+    String branch;
+
+    private List<String> transactionHistory=new ArrayList<>();
+
+
+    public Account(String name, String civilId, String numberPhone, String accountNumber, Double balance, LocalDate openDate, String branch){
+        this.name=name;
+        this.civilId=civilId;
+        this.numberPhone=numberPhone;
+        this.accountNumber=accountNumber;
+        this.balance=balance;
+        this.branch=branch;
+        this.openDate=openDate;
+    }
+
+    public Account(String name, String accountNumber){
+        this.name=name;
+        this.accountNumber=accountNumber;
+        this.civilId = "";
+        this.numberPhone = "";
+        this.balance = 0.0;
+        this.openDate = LocalDate.now();
+        this.branch = "";
+    }
+
+
+    public String getAccountNumber(){
+        return accountNumber;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public Double getBalance(){
+        return balance;
+    }
+
+    public String getCivilId(){
+        return civilId;
+    }
+
+    public void setBalance(Double balance){
+        this.balance=balance;
+    }
+
+    public void addTransaction(String transaction){
+        transactionHistory.add(transaction);
+    }
+
+    public List<String>getTransactionHistory(){
+        return transactionHistory;
+    }
+
+
+}
+
+
